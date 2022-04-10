@@ -1,0 +1,22 @@
+mensagem = input("Digite a mensagem aqui: ")
+rotacoes = int(input("Digite o número de rotações: "))
+alfabeto = "abcdefghijklmnopqrstuvxwyz"
+letra = "abcdefghijklmnopqrstuvxwyz"
+
+def alfabeto(texto):
+    novoTexto = ' '
+    for letra in texto:
+        numero = ord(letra)
+        novoTexto += chr(numero + ( 87 if numero < -26 else rotacoes))
+    return novoTexto
+       
+print ("A mensagem criptografada é: ", alfabeto(mensagem))
+
+descript = input("Deseja descriptografar a mensagem (s/n)?")
+
+if (descript == "s"):
+	rotacoes1 = int(input("Digite o número de rotações necessárias: "))
+	if (rotacoes1 == rotacoes):
+		print(mensagem) and (- rotacoes)
+else:
+	print("Programa finalizado!")
