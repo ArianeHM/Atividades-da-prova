@@ -1,0 +1,21 @@
+def nomes():
+    rex = int(input('Posição do Rex: '))
+    bob = int(input('Posição do Bob : '))
+    oli = int(input('Posição do Oli: '))
+    
+    nome = ' '
+
+    if bob > rex:
+        nome = "Bob"
+    elif bob == rex:
+    	nome = "Oli"
+    elif bob < rex:
+    	nome = "Rex"
+    elif bob > oli:
+    	nome = "Bob"
+    elif oli > rex and oli > bob:
+        nome = "Oli"
+
+    return nome
+    
+print("Quem venceu: ", nomes())
